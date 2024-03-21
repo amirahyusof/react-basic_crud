@@ -14,16 +14,16 @@ function App() {
       <nav>
         <ul className="flex flex-row list-none py-8 px-10 text-lg text-white">
           <li className='px-6 hover:underline'>
-            <Link to="/">List User</Link>
+            <Link to="/">Create User</Link>
           </li>
           <li className='hover:underline'>
-            <Link to="user/create">Create User</Link>
+            <Link to="user/list">List User</Link>
           </li>
         </ul>
 
         <Routes>
-          <Route index element={<ListUser />} />
-          <Route path='user/create' element={<CreateUser />} />
+          <Route index element={<CreateUser />} />
+          <Route path='user/list' element={<ListUser />} />
           <Route path='user/:id/edit' element={<EditUser />} />
         </Routes>
       </nav>
