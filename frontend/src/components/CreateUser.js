@@ -34,7 +34,7 @@ function CreateUser() {
             console.log(data);
 
             // Navigate to the desired route using navigate.push
-            navigate.push('/');
+            navigate('/');
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
