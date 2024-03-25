@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 import ListUser from './components/ListUser';
 import CreateUser from './components/CreateUser';
-import Edit from './components/Edit';
+import EditUser from './components/EditUser';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route index element={<CreateUser />} />
           <Route path='/user/list' element={<ListUser />} />
-          <Route path='/user/:id/edit' element={<Edit />} />
+          <Route path='/user/:id/edit' element={<EditUser />} />
         </Routes>
       </nav>
       </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function CreateUser() {
-    const [inputs, setInputs] = React.useState({});
+    const [inputs, setInputs] = React.useState([]);
     const navigate = useNavigate();
 
     const handleChange = (event) => {
@@ -18,7 +18,7 @@ function CreateUser() {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost/API/saveUser.php', {
+            const response = await fetch('http://localhost/API/user.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ function CreateUser() {
             const data = await response.json();
             console.log(data);
 
-            // Navigate to the desired route using navigate.push
+            // Navigate to the desired route using navigate
             navigate('/');
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);

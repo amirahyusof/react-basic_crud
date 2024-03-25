@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function ListUser(){
-    
     const[users, setUsers] = useState([]);
 
     useEffect(()=>{
@@ -11,7 +10,7 @@ function ListUser(){
     
     async function getUser(){
         try {
-            const response =await fetch('http://localhost/API/saveUser.php');
+            const response =await fetch('http://localhost/API/user.php');
             
             if(!response.ok){
             throw new Error("Network response not ok");
@@ -44,7 +43,7 @@ function ListUser(){
                     <tr key={key}>
                         <td>{user.id}</td>
                         <td>{user.name}</td>
-                        <td>{user.email}</td>
+                        <td className="px-4">{user.email}</td>
                         <td>{user.phone}</td>
                         <td>
                             <Link className="px-4" to={`/user/${user.id}/edit`}>Edit</Link>
