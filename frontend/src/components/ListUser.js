@@ -10,7 +10,7 @@ function ListUser(){
     
     async function getUser(){
         try {
-            const response =await fetch('http://localhost/API/user.php');
+            const response =await fetch('http://localhost:8888/user.php');
             
             if(!response.ok){
             throw new Error("Network response not ok");
@@ -27,7 +27,7 @@ function ListUser(){
 
     const deleteUser = async (id) => {
         try {
-            const response = await fetch(`http://localhost/API/user.php/${id}/delete`, {
+            const response = await fetch(`http://localhost:8888/user.php/${id}/delete`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

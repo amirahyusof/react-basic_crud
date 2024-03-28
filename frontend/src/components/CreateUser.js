@@ -18,7 +18,7 @@ function CreateUser() {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost/API/user.php', {
+            const response = await fetch('http://localhost:8888/user.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
