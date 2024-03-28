@@ -33,8 +33,8 @@ function CreateUser() {
             const data = await response.json();
             console.log(data);
 
-            // Navigate to the desired route using navigate
-            navigate('/');
+            // Navigate to list of user
+            navigate('/user/list');
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
@@ -56,7 +56,7 @@ function CreateUser() {
                 <input className="mb-4 mx-2 px-2 w-[280px] text-black" type="text" name="phone" onChange={handleChange} />
                 <br />
 
-                <button className="border w-[100px] mb-4 rounded-full p-2">Submit</button>
+                <button className="border w-[100px] mb-4 rounded-full p-2 bg-[#EAD7BB] text-black hover:bg-[#FFF2D8]">Submit</button>
             </form>
         </div>
     )

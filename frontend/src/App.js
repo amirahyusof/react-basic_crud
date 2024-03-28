@@ -8,15 +8,15 @@ import EditUser from './components/EditUser';
 function App() {
   return (
     <div className="App">
-      <h1 className="text-2xl py-4">React CRUD Operations</h1>
+      <h1 className="text-3xl py-4 my-4 text-[#FFF2D8]">React CRUD Operations</h1>
 
       <BrowserRouter>
       <nav>
         <ul className="flex flex-row list-none py-8 px-10 text-lg text-white">
-          <li className='px-6 hover:underline'>
+          <li className='text-xl px-6 hover:underline'>
             <Link to="/">Create User</Link>
           </li>
-          <li className='hover:underline'>
+          <li className='text-xl hover:underline'>
             <Link to="user/list">List User</Link>
           </li>
         </ul>

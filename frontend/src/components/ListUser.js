@@ -48,16 +48,16 @@ function ListUser(){
     }
     
     return(
-        <div className="border rounded-2xl bg-[#113946] w-[650px] mx-auto p-16 text-white">
-            <h1 className="text-2xl font-semibold uppercase">List User</h1>
-            <table className="border my-4 mx-auto">
+        <div className="border rounded-2xl bg-[#113946] w-[650px] mx-auto px-6 text-white">
+            <h1 className="text-2xl font-semibold uppercase my-4">List User</h1>
+            <table className="border my-8 w-[600px]">
                 <thead>
                     <tr>
-                        <th className="px-4">No</th>
-                        <th className="px-6">Name</th>
-                        <th className="px-6">Email</th>
-                        <th className="px-6">Phone</th>
-                        <th className="px-6">Actions</th>
+                        <th className="px-4 mx-4">No</th>
+                        <th className="px-6 mx-4">Name</th>
+                        <th className="px-6 mx-4">Email</th>
+                        <th className="px-6 mx-4">Phone</th>
+                        <th className="px-6 mx-4">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,8 +68,8 @@ function ListUser(){
                         <td className="px-4">{user.email}</td>
                         <td>{user.phone}</td>
                         <td>
-                            <Link className="px-4" to={`/user/${user.id}/edit`}>Edit</Link>
-                            <button className="px-2" onClick={()=> deleteUser(user.id)}>Delete</button>
+                            <Link className="px-4 border rounded-lg bg-[#EAD7BB] text-black mx-2 hover:bg-[#FFF2D8]" to={`/user/${user.id}/edit`}>Edit</Link>
+                            <button className="px-2 border rounded-lg bg-[#EAD7BB] text-black hover:bg-[#FFF2D8]" onClick={()=> deleteUser(user.id)}>Delete</button>
                         </td>
                     </tr>
                     )}

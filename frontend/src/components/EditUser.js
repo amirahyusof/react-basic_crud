@@ -83,7 +83,7 @@ function EditUser(){
                 <input  value={inputs.phone} className="mb-4 mx-2 px-2 w-[280px] text-black" type="text" name="phone" onChange={handleChange} />
                 <br />
 
-                <button className="border w-[100px] mb-4 rounded-full p-2">Submit</button>
+                <button className="border w-[100px] mb-4 rounded-full p-2 bg-[#EAD7BB] text-black hover:bg-[#FFF2D8]">Submit</button>
             </form>
         </div>
     )
