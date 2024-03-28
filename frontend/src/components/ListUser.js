@@ -24,6 +24,28 @@ function ListUser(){
             console.error("There was problem with your fetch operation:", error);
         }
     }
+
+    const deleteUser = async (id) => {
+        try {
+            const response = await fetch(`http://localhost/API/user.php/${id}/delete`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error("Network response not ok");
+            }
+
+           setUsers(users.filter(user => user.id !== id));
+           console.log("User deleted successfully")
+
+        } catch (error) {
+            console.error('Error processing request', error);
+        }
+
+    }
     
     return(
         <div className="border rounded-2xl bg-[#113946] w-[650px] mx-auto p-16 text-white">
@@ -47,7 +69,7 @@ function ListUser(){
                         <td>{user.phone}</td>
                         <td>
                             <Link className="px-4" to={`/user/${user.id}/edit`}>Edit</Link>
-                            <button className="px-2">Delete</button>
+                            <button className="px-2" onClick={()=> deleteUser(user.id)}>Delete</button>
                         </td>
                     </tr>
                     )}
