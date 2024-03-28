@@ -42,7 +42,7 @@ function EditUser(){
         event.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost/API/user.php/${id}`, {
+            const response = await fetch(`http://localhost/API/user.php/${id}/edit`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,8 +58,10 @@ function EditUser(){
             const data = await response.json();
             console.log(data);
 
-            // Navigate to the desired route using navigate.push
-            navigate('/');
+            // Navigate to the ListUser Page\
+            console.log('Navigating to ListUser page')
+            navigate('/user/list');
+
         } catch (error) {
             console.error('Error processing request', error);
         }
