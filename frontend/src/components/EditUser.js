@@ -14,7 +14,7 @@ function EditUser(){
     
     async function getUser(){
         try {
-            const response =await fetch(`http://localhost:8888/user.php/${id}`);
+            const response =await fetch(`http://localhost:8888/api/user.php/${id}`);
             
             if(!response.ok){
             throw new Error("Network response not ok");
@@ -42,7 +42,7 @@ function EditUser(){
         event.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8888/user.php/${id}/edit`, {
+            const response = await fetch(`http://localhost:8888/api/user.php/${id}/edit`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

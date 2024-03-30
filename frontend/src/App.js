@@ -14,7 +14,7 @@ function App() {
       <nav>
         <ul className="flex flex-row list-none py-8 px-10 text-lg text-white">
           <li className='text-xl px-6 hover:underline'>
-            <Link to="/">Create User</Link>
+            <Link to="user/create">Create User</Link>
           </li>
           <li className='text-xl hover:underline'>
             <Link to="user/list">List User</Link>
@@ -22,7 +22,7 @@ function App() {
         </ul>
 
         <Routes>
-          <Route index element={<CreateUser />} />
+          <Route index path='/user/create' element={<CreateUser />} />
           <Route path='/user/list' element={<ListUser />} />
           <Route path='/user/:id/edit' element={<EditUser />} />
         </Routes>
